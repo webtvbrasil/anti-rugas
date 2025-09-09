@@ -17,6 +17,9 @@
             color: #ffffff;
             line-height: 1.6;
             overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         /* Background Orbs */
@@ -70,6 +73,7 @@
             position: sticky;
             top: 0;
             z-index: 100;
+            width: 100%;
         }
 
         .header-content {
@@ -105,14 +109,19 @@
         /* Container */
         .container {
             max-width: 1200px;
+            width: 100%;
             margin: 0 auto;
             padding: 0 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         /* Hero Section */
         .hero {
             padding: 4rem 0;
             text-align: center;
+            width: 100%;
         }
 
         .hero h1 {
@@ -143,15 +152,23 @@
 
         /* Main Content */
         .main-content {
+            width: 100%;
+            padding: 4rem 0;
+        }
+
+        .content-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
-            padding: 4rem 0;
             align-items: center;
+            max-width: 1000px;
+            margin: 0 auto;
         }
 
         .content-left {
-            space-y: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
         }
 
         .benefits {
@@ -160,7 +177,6 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 1rem;
             padding: 2rem;
-            margin-bottom: 2rem;
         }
 
         .benefits h3 {
@@ -266,6 +282,8 @@
             border-radius: 2rem;
             margin: 4rem 0;
             border: 1px solid rgba(255, 255, 255, 0.1);
+            width: 100%;
+            max-width: 1200px;
         }
 
         .cta-button {
@@ -333,10 +351,16 @@
 
         /* Statistics Section */
         .stats-section {
+            width: 100%;
+            padding: 4rem 0;
+        }
+
+        .stats-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
-            padding: 4rem 0;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .stat-card {
@@ -369,6 +393,7 @@
         /* Testimonials */
         .testimonials {
             padding: 4rem 0;
+            width: 100%;
         }
 
         .testimonials h2 {
@@ -382,6 +407,8 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .testimonial-card {
@@ -422,12 +449,15 @@
             padding: 3rem 0;
             margin-top: 4rem;
             position: relative;
+            width: 100%;
         }
 
         .footer-content {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .footer-section h3 {
@@ -490,7 +520,7 @@
 
         /* Responsive */
         @media (max-width: 1024px) {
-            .main-content {
+            .content-grid {
                 grid-template-columns: 1fr;
                 gap: 2rem;
             }
@@ -514,7 +544,7 @@
                 font-size: 1.2rem;
             }
             
-            .stats-section {
+            .stats-grid {
                 grid-template-columns: 1fr;
             }
             
@@ -567,7 +597,7 @@
     <!-- Main Content -->
     <section class="main-content">
         <div class="container">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+            <div class="content-grid">
                 <div class="content-left">
                     <div class="benefits">
                         <h3>🌟 Transformação Garantida</h3>
@@ -602,7 +632,7 @@
     <!-- Statistics -->
     <section class="stats-section">
         <div class="container">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+            <div class="stats-grid">
                 <div class="stat-card">
                     <div class="stat-number">50K+</div>
                     <div class="stat-label">Mulheres Satisfeitas</div>
